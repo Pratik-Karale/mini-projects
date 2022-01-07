@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes</title>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://use.fontawesome.com/66c163070e.js"></script>
+    <style></style>
+  </head>
+  <!-- 
+    <i class="fa fa-star" aria-hidden="true"></i>
+  -->
+  <body>
+    <!-- btn to toggle the favorite quotes window -->
+    <button class="favs-list-btn">Favorites</button>
+    <!-- main quote from api -->
+    <div class="quote-container">
+      <div id="quote">Never Give Up!</div>
+      <div id="author">Anonymous</div>
+      <div class="extra-btns">
+        <button class="copy-btn">
+          <i class="fa fa-clipboard" aria-hidden="true"></i>
+        </button>
+        <button class="fav-btn">
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <!-- this will be hidden at first be shown when we click on button.favslist-btn  -->
+    <div class="fav-quotes-list-container">
+      <!-- <h1>hmmm.....looks like you still dont have any favorite quotes</h1> -->
+      <button class="close-btn">
+        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+      </button>
+    </div>
+  </body>
+</html>

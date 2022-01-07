@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Bilbo&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+i {
+  pointer-events: none;
+}
+
+body {
+  background-color: black;
+  font-family: "Bilbo", cursive;
+  margin: 0;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 3em;
+}
+.quote-container {
+  max-width: 1000px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#quote {
+  text-align: center;
+}
+#author {
+  text-align: right;
+  font-size: 1em;
+  color: #fdfdfd42;
+}
+
+.favs-list-btn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: 1px solid rgb(255, 230, 0);
+  color: rgb(255, 230, 0);
+  background-color: black;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.fav-btn,
+.copy-btn {
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.fav-btn:hover i.fa,
+.copy-btn:hover i.fa {
+  color: rgb(255, 230, 0);
+}
+
+.favorated i {
+  color: rgb(255, 230, 0);
+}
+
+.fav-quotes-list-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-size: 0.85em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.fav-quotes-list-container .close-btn {
+  z-index: 5;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  color: white;
+}
+.fav-quotes-list-container > h1 {
+  font-weight: normal;
+  padding: 4rem;
+}
+.fav-quotes-list-container .quote-container {
+  background-color: black;
+  margin: 3rem;
+  border: 5px solid rgb(255, 230, 0);
+  border-radius: 20px;
+}

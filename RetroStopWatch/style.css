@@ -1,0 +1,39 @@
+body {
+  font-family: "Press Start 2P", cursive;
+  background-image: url(images/bodyBg.png);
+  width: 98vw;
+  height: 97vh;
+  display: grid;
+  place-items: center;
+}
+* {
+  background-position: center;
+}
+.machine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  --sizeMachine: 1;
+  width: calc(785px * var(--sizeMachine));
+  height: calc(576px * var(--sizeMachine));
+  background: url(images/machineBg.png);
+}
+.timeDisplay {
+  color: #05ff05;
+  letter-spacing: calc(var(--sizeMachine) * 5px);
+  font-size: calc(var(--sizeMachine) * 3em);
+  display: grid;
+  place-items: center;
+  width: calc(672px * var(--sizeMachine));
+  height: calc(220px * var(--sizeMachine));
+  background-image: url(images/timerBg.png);
+  background-repeat: no-repeat;
+}
+.btns {
+  margin: calc(var(--sizeMachine) * 60px) 0;
+}
+.btns > button {
+  border: none;
+  background-color: transparent;
+}

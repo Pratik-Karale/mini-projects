@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(174deg, #0700b8 0%, #7a347f 100%);
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cont {
+  color: #fff;
+}
+.todoApp {
+  /* border: 1px solid red; */
+  margin: 2em;
+}
+#todoMakerInput {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 1em;
+}
+#todoMakerInput:focus-visible {
+  outline: none;
+}
+
+#todoAdderInput {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 1px solid white;
+  border-radius: 5%;
+  margin: 1em;
+  padding: 10px;
+}
+.todo {
+  color: black;
+  background-color: #fff;
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+  align-items: center;
+}
+.todoCheckBtn {
+  font-size: 3rem;
+}

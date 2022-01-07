@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  position: relative;
+}
+
+:root {
+  --board-size: 33vw;
+}
+
+.game-board {
+  margin: 0 auto;
+  justify-content: space-between;
+  width: var(--board-size);
+  height: var(--board-size);
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(26, 26, 26);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.card {
+  /* margin: 10px; */
+  transition: opacity 0.5s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--board-size) / 9);
+  perspective: 75rem;
+  width: calc(var(--board-size) / 5);
+  height: calc(var(--board-size) / 5);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.back {
+  transform: rotateY(-180deg);
+  background-color: #fff;
+}
+.front {
+  transform: rotateY(0);
+  position: absolute;
+  background: rgb(0, 42, 254);
+  background: radial-gradient(
+    circle,
+    rgba(0, 42, 254, 1) 0%,
+    rgba(132, 0, 255, 1) 100%
+  );
+}
+.front > span {
+  transform: rotate(-45deg);
+  font-size: calc(var(--board-size) / 18);
+  text-shadow: 0px 0px 20px rgb(0 42 254);
+}
+.front,
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease;
+  backface-visibility: hidden;
+}
+.card.visible .front {
+  transform: rotateY(180deg);
+}
+.card.visible .back {
+  transform: rotateY(0deg);
+}
+
+.card.found {
+  opacity: 0;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background: black;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.5sec;
+}
+
+.show-overlay {
+  z-index: 1;
+  display: flex;
+  opacity: 1;
+}
+
+.hidden-overlay {
+  display: none;
+  opacity: 0;
+}
+
+#counter {
+  color: #fff;
+  font-size: calc(var(--board-size) / 7);
+  margin: calc(var(--board-size) / 18);
+  text-align: center;
+}
+
+/* media queries */
+@media (max-width: 1000px) {
+  :root {
+    --board-size: 50vw;
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --board-size: 80vw;
+  }
+}
+@media (max-width: 300px) {
+  :root {
+    --board-size: 100vw;
+  }
+}

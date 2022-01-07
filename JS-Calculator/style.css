@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.calc-cont {
+  width: 50vw;
+}
+.calc-cont button {
+  padding: 1rem 0;
+  font-size: 1rem;
+  border-radius: 0;
+  border: 0.001cm solid rgb(97, 97, 97);
+  background: rgba(0, 0, 0, 0.548);
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.2s linear;
+}
+button.number-btn {
+  background-color: #000;
+}
+
+.input {
+  display: grid;
+}
+
+.delete-opts {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+}
+
+.number-btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.main-output {
+  height: 5rem;
+  display: grid;
+  grid-template-rows: 1fr 1.25fr;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sub-output {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-right: 5%;
+}
+.sub-output:nth-child(1) {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.61);
+  /* background: rgb(104, 104, 104); */
+}
+.sub-output:last-child {
+  color: white;
+  font-size: 2rem;
+  /* background-color: aqua; */
+}
+
+.main-output > * {
+  overflow-x: hidden;
+}
+.operators {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+button.operator,
+button.equal-to-btn {
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+button.equal-to-btn {
+  background-color: #002fff;
+}
+
+.calc-cont button:hover {
+  background-color: rgb(75, 75, 75);
+}
